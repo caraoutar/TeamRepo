@@ -16,6 +16,14 @@ private Vector3 nextPos;
 private bool reachedPos = true;
 
 private bool stopMovement = false;
+
+public GameObject bush;
+
+public GameObject bush2;
+
+public GameObject bush3;
+
+public GameObject bush4; 
    
 
     // Start is called before the first frame update
@@ -30,9 +38,10 @@ private bool stopMovement = false;
         if(Input.GetMouseButtonDown(0)) {
 
             //making sure pressing mouse is working
-            Debug.Log("pressed mouse"); 
+            //Debug.Log("pressed mouse"); 
             //call movement function
             StartMovement();
+          
         }
         //if reached pos is false
         if(!reachedPos) {
@@ -61,10 +70,33 @@ private bool stopMovement = false;
         //is the position where we want to move to
         reachedPos = false;
 
-        Debug.Log(nextPos);
+        //Debug.Log(nextPos);
 
         }
 
+    void OnTriggerEnter2D(Collider2D other) {
+
+        if(other.gameObject.name == "bush") {
+            Debug.Log("triggered bush object");
+        }
+
+        if(other.gameObject.name == "bush2") {
+
+            Debug.Log("triggered bush2");
+        }
+
+        if(other.gameObject.name == "bush3") {
+
+            Debug.Log("triggered bush3");
+        }
+
+        if(other.gameObject.name == "bush4") {
+
+            Debug.Log("triggered bush4");
+        }
+
+
+    }
 
     }
 
