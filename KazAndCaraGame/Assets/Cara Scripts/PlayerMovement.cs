@@ -78,25 +78,52 @@ public GameObject bush4;
 
         if(other.gameObject.name == "bush") {
             Debug.Log("triggered bush object");
+            GameObject[] cranberries1 = GameObject.FindGameObjectsWithTag("Cranberry");
+            foreach(GameObject cranberry1 in cranberries1) {
+                GameObject.Destroy(cranberry1);
+            }
+
         }
 
         if(other.gameObject.name == "bush2") {
 
             Debug.Log("triggered bush2");
+            GameObject[] cranberries2 = GameObject.FindGameObjectsWithTag("Cranberry2");
+            foreach(GameObject cranberry2 in cranberries2) {
+                GameObject.Destroy(cranberry2);
+            }
         }
 
         if(other.gameObject.name == "bush3") {
 
             Debug.Log("triggered bush3");
+            GameObject[] cranberries3 = GameObject.FindGameObjectsWithTag("Cranberry3");
+            foreach(GameObject cranberry3 in cranberries3) {
+                GameObject.Destroy(cranberry3);
+            }
         }
 
         if(other.gameObject.name == "bush4") {
 
             Debug.Log("triggered bush4");
+
+            //https://answers.unity.com/questions/1143629/destroy-multiple-gameobjects-with-tag-c.html
+            //used this forum page for code reference ^ to destroy multiple tagged objects
+            GameObject[] cranberries4 = GameObject.FindGameObjectsWithTag("Cranberry4");
+            foreach(GameObject cranberry4 in cranberries4) {
+                GameObject.Destroy(cranberry4);
+            }
+
+            //Destroy(GameObject.FindWithTag("Cranberry4"));
+        }
+
+        
+
+        
         }
 
 
     }
 
-    }
+    
 
