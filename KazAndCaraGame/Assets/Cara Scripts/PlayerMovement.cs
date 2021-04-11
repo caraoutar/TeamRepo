@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+//mouse movement code from class lecture
+
 //movement vars
 
 public float speed;
@@ -23,13 +25,17 @@ private Vector3 nextPos;
     {
         if(Input.GetMouseButtonDown(0)) {
 
+            //making sure pressing mouse is working
             Debug.Log("pressed mouse"); 
+            //call movement function
+            StartMovement();
         }
     }
 
-    void FixedUpdate() {
+    void StartMovement() {
+        //set next position to where the player clicks on screen
+        nextPos = Input.mousePosition;
 
-        
         }
 
 
