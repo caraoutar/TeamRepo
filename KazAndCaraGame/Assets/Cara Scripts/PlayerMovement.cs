@@ -15,8 +15,6 @@ private Vector3 nextPos;
 
 private bool reachedPos = true;
 
-private bool stopMovement = false;
-
 public GameObject bush;
 
 public GameObject bush2;
@@ -78,9 +76,13 @@ public GameObject bush4;
 
         if(other.gameObject.name == "bush") {
             Debug.Log("triggered bush object");
+
+            //https://answers.unity.com/questions/1143629/destroy-multiple-gameobjects-with-tag-c.html
+            //used this forum page for code reference ^ to destroy multiple tagged objects
             GameObject[] cranberries1 = GameObject.FindGameObjectsWithTag("Cranberry");
             foreach(GameObject cranberry1 in cranberries1) {
                 GameObject.Destroy(cranberry1);
+                gameManager.CranberryValue += 1;
             }
 
         }
@@ -91,6 +93,7 @@ public GameObject bush4;
             GameObject[] cranberries2 = GameObject.FindGameObjectsWithTag("Cranberry2");
             foreach(GameObject cranberry2 in cranberries2) {
                 GameObject.Destroy(cranberry2);
+                gameManager.CranberryValue += 1;
             }
         }
 
@@ -100,6 +103,7 @@ public GameObject bush4;
             GameObject[] cranberries3 = GameObject.FindGameObjectsWithTag("Cranberry3");
             foreach(GameObject cranberry3 in cranberries3) {
                 GameObject.Destroy(cranberry3);
+                gameManager.CranberryValue += 1;
             }
         }
 
@@ -107,14 +111,14 @@ public GameObject bush4;
 
             Debug.Log("triggered bush4");
 
-            //https://answers.unity.com/questions/1143629/destroy-multiple-gameobjects-with-tag-c.html
-            //used this forum page for code reference ^ to destroy multiple tagged objects
             GameObject[] cranberries4 = GameObject.FindGameObjectsWithTag("Cranberry4");
             foreach(GameObject cranberry4 in cranberries4) {
                 GameObject.Destroy(cranberry4);
+                gameManager.CranberryValue += 1;
+                //Debug.Log(gameManager.CranberryValue);
             }
 
-            //Destroy(GameObject.FindWithTag("Cranberry4"));
+            
         }
 
         
